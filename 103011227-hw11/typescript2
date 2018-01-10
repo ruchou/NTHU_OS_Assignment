@@ -1,0 +1,13 @@
+Script started on Wed Dec  6 22:11:25 2017
+[?1034hbash-3.2$ ls
+__pycache__	disk.py		myout.txt	proc.py		sample2.txt	typescript
+cntlblks.py	hw11.pdf	pfs.py		sample1.txt	sample3.txt	typescript1
+bash-3.2$ pythonpr[K[K3 proc.py 
+input directory tree=('/', ('home/', ('u1/', 'hello.c'), ('u2/', 'world.h'), 'homefiles'), ('bin/', 'ls'), ('etc/',))
+tuple reconstructed from directory=('/', ('home/', ('u1/', 'hello.c'), ('u2/', 'world.h'), 'homefiles'), ('bin/', 'ls'), ('etc/',))
+creation time for /home/u1/hello.c is Wed Dec  6 22:11:34 2017
+f2 read=hello
+f2 read=world
+bash-3.2$ exit
+
+Script done on Wed Dec  6 22:11:41 2017

@@ -1,0 +1,16 @@
+Script started on Wed Dec  6 09:25:56 2017
+[?1034hbash-3.2$ ls
+__pycache__	cntlblks.py	pfs.py		typescript	typescript1
+bash-3.2$ python3 pfs.py 
+input directory tree=('/', ('home/', ('u1/', 'hello.c', 'myfriend.h'), ('u2/', 'world.h'), 'homefiles'), ('bin/', 'ls'), ('etc/',))
+directory=('/', ('home/', ('u1/', 'hello.c', 'myfriend.h'), ('u2/', 'world.h'), 'homefiles'), ('bin/', 'ls'), ('etc/',))
+last modification date for /home/u1/ is Wed Dec  6 09:26:01 2017
+after renaming=('/', ('home/', ('u1/', 'goodbye.py', 'myfriend.h'), ('u2/', 'world.h'), 'homefiles'), ('bin/', 'ls'), ('etc/',))
+last modification date for /home/u1/ is Wed Dec  6 09:26:06 2017
+after moving=('/', ('home/', ('u1/', 'goodbye.py'), ('u2/', 'world.h', 'myfriend.h'), 'homefiles'), ('bin/', 'ls'), ('etc/',))
+after moving=('/', ('home/', ('u1/', 'goodbye.py', ('etc/',)), ('u2/', 'world.h', 'myfriend.h'), 'homefiles'), ('bin/', 'ls'))
+bash-3.2$ ls
+__pycache__	cntlblks.py	pfs.py		typescript	typescript1
+bash-3.2$ exit
+
+Script done on Wed Dec  6 09:26:08 2017

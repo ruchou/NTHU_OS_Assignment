@@ -1,0 +1,34 @@
+Script started on Wed Dec  6 22:12:04 2017
+[?1034hbash-3.2$ ls
+__pycache__	disk.py		myout.txt	proc.py		sample2.txt	typescript	typescript2
+cntlblks.py	hw11.pdf	pfs.py		sample1.txt	sample3.txt	typescript1
+bash-3.2$ pty[K[Kython3 disk.py 
+policy FCFS  (640): [98, 183, 37, 122, 14, 124, 65, 67]
+policy SSTF  (236): [65, 67, 37, 14, 98, 122, 124, 183]
+policy SCAN up (331): [65, 67, 98, 122, 124, 183, 199, 37, 14]
+policy SCAN down (236): [37, 14, 0, 65, 67, 98, 122, 124, 183]
+policy LOOK up (299): [65, 67, 98, 122, 124, 183, 37, 14]
+policy LOOK down (208): [37, 14, 65, 67, 98, 122, 124, 183]
+policy C-SCAN up (382): [65, 67, 98, 122, 124, 183, 199, 0, 14, 37]
+policy C-SCAN down (386): [37, 14, 0, 199, 183, 124, 122, 98, 67, 65]
+policy C-LOOK up (322): [65, 67, 98, 122, 124, 183, 14, 37]
+policy C-LOOK down (326): [37, 14, 183, 124, 122, 98, 67, 65]
+more tests on SCAN and C-SCAN
+Q=[98, 37, 0, 122, 14]
+policy SCAN up (345): [98, 122, 199, 37, 14, 0]
+policy SCAN down (175): [37, 14, 0, 98, 122]
+policy C-SCAN up (382): [98, 122, 199, 0, 14, 37]
+policy C-SCAN down (353): [37, 14, 0, 199, 122, 98]
+Q=[98, 37, 199, 122, 14]
+policy SCAN up (331): [98, 122, 199, 37, 14]
+policy SCAN down (252): [37, 14, 0, 98, 122, 199]
+policy C-SCAN up (382): [98, 122, 199, 0, 14, 37]
+policy C-SCAN down (353): [37, 14, 0, 199, 122, 98]
+Q=[98, 0, 37, 199, 14]
+policy SCAN up (345): [98, 199, 37, 14, 0]
+policy SCAN down (252): [37, 14, 0, 98, 199]
+policy C-SCAN up (382): [98, 199, 0, 14, 37]
+policy C-SCAN down (353): [37, 14, 0, 199, 98]
+bash-3.2$ exit
+
+Script done on Wed Dec  6 22:12:15 2017

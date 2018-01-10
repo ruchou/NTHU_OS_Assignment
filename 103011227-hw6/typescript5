@@ -1,0 +1,21 @@
+Script started on Sat Oct 28 00:23:18 2017
+[?1034hbash-3.2$ ls
+__pycache__	fifo.pyc	minheap.pyc	npsched.py	out.txt		psched.pyc	task.py		typescript	typescript4
+fifo.py		hw6both.py	myout.txt	npsched.pyc	psched.py	r.py		task.pyc	typescript3
+bash-3.2$ python hw6both.py [1@3
+tasks = [Task('A', 0, 7), Task('B', 2, 4), Task('C', 4, 1), Task('D', 5, 4)]
+nonpreemptive SJF: A-A-A-A-A-A-A-C-B-B-B-B-D-D-D-D-None-None-None-None
+  thruput = (4, 16) = 0.25, waittimes = (16, 4) = 4.00, turnaroundtime = (32, 4) = 8.00
+preemptive SJF: A-A-B-B-C-B-B-D-D-D-D-A-A-A-A-A-None-None-None-None
+  thruput = (4, 16) = 0.25, warittimes = (12, 4) = 3.00, turnaroundtime = (28, 4) = 7.00
+nonpreemptive FCFS: A-A-A-A-A-A-A-B-B-B-B-C-D-D-D-D-None-None-None-None
+  thruput = (4, 16) = 0.25, waittimes = (19, 4) = 4.75, turnaroundtime = (35, 4) = 8.75
+preemptive FCFS: A-A-A-A-A-A-A-B-B-B-B-C-D-D-D-D-None-None-None-None
+  thruput = (4, 16) = 0.25, warittimes = (19, 4) = 4.75, turnaroundtime = (35, 4) = 8.75
+nonpreemptive RR: A-A-A-A-A-A-A-B-B-B-B-C-D-D-D-D-None-None-None-None
+  thruput = (4, 16) = 0.25, waittimes = (19, 4) = 4.75, turnaroundtime = (35, 4) = 8.75
+preemptive RR: A-A-B-A-B-C-A-D-B-A-D-B-A-D-A-D-None-None-None-None
+  thruput = (4, 16) = 0.25, warittimes = (22, 4) = 5.50, turnaroundtime = (38, 4) = 9.50
+bash-3.2$ exit
+
+Script done on Sat Oct 28 00:23:34 2017

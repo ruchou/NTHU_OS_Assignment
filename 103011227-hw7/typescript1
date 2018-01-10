@@ -1,0 +1,9 @@
+Script started on Fri Nov  3 02:34:12 2017
+[?1034hbash-3.2$ ls
+banker.py	detect.py	graph.py	typescript
+bash-3.2$ pyy[Kthon3 graph.py 
+g={'P1': ['R1'], 'P2': ['R3', 'R4', 'R5'], 'P3': ['R5'], 'P4': ['R2'], 'P5': [], 'R1': ['P2'], 'R2': ['P1'], 'R3': ['P5'], 'R4': ['P3'], 'R5': ['P4']}, cycle=['P1', 'R1', 'P2', 'R4', 'P3', 'R5', 'P4', 'R2']
+g={'P1': ['P2'], 'P2': ['P3', 'P4', 'P5'], 'P3': ['P4'], 'P4': ['P1'], 'P5': []}, cycle=['P1', 'P2', 'P3', 'P4']
+bash-3.2$ exit
+
+Script done on Fri Nov  3 02:34:30 2017

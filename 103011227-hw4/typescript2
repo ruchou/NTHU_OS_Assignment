@@ -1,0 +1,18 @@
+Script started on Wed Oct 11 14:13:34 2017
+[?1034hbash-3.2$ ls
+helloworld.py	hw1.py		hw4.py		randomInt.txt
+helloworld.pyc	hw2.py		joe.py		randomyesno.py
+human.py	hw3.py		qsortTh.py	typescript
+bash-3.2$ lskill 4762ps[Klskill 4766u[C[C[C[C[C[C[Cps[Ktime python3 qsortTh.py
+successfully sorted
+
+real	5m40.621s
+user	4m41.993s
+sys	0m58.717s
+bash-3.2$ ls
+helloworld.py	hw1.py		hw4.py		randomInt.txt
+helloworld.pyc	hw2.py		joe.py		randomyesno.py
+human.py	hw3.py		qsortTh.py	typescript
+bash-3.2$ exit
+
+Script done on Wed Oct 11 14:20:00 2017

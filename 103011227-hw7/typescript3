@@ -1,0 +1,43 @@
+Script started on Fri Nov  3 02:39:55 2017
+[?1034hbash-3.2$ ls
+banker.py	detect.py	graph.py	typescript	typescript1	typescript2
+bash-3.2$ python3 detect.py 
+[False, False, False, False, False]
+i=0, (Request[0]=[0, 0, 0]) <= (Work=[0, 0, 0]) True, append P0 (+Allocation[0]=[0, 1, 0])=> Work=[0, 1, 0], Finish=[True, False, False, False, False]
+i=1, (Request[1]=[2, 0, 2]) <= (Work=[0, 1, 0]) False, P1 must wait
+i=2, (Request[2]=[0, 0, 0]) <= (Work=[0, 1, 0]) True, append P2 (+Allocation[2]=[3, 0, 3])=> Work=[3, 1, 3], Finish=[True, False, True, False, False]
+i=3, (Request[3]=[1, 0, 0]) <= (Work=[3, 1, 3]) True, append P3 (+Allocation[3]=[2, 1, 1])=> Work=[5, 2, 4], Finish=[True, False, True, True, False]
+i=4, (Request[4]=[0, 0, 2]) <= (Work=[5, 2, 4]) True, append P4 (+Allocation[4]=[0, 0, 2])=> Work=[5, 2, 6], Finish=[True, False, True, True, True]
+i=0, Finish[0] is True, skipping
+i=1, (Request[1]=[2, 0, 2]) <= (Work=[5, 2, 6]) True, append P1 (+Allocation[1]=[2, 0, 0])=> Work=[7, 2, 6], Finish=[True, True, True, True, True]
+sequence = [0, 2, 3, 4, 1]
+[False, False, False, False, False]
+i=0, (Request[0]=[0, 0, 0]) <= (Work=[0, 0, 0]) True, append P0 (+Allocation[0]=[0, 1, 0])=> Work=[0, 1, 0], Finish=[True, False, False, False, False]
+i=1, (Request[1]=[2, 0, 2]) <= (Work=[0, 1, 0]) False, P1 must wait
+i=2, (Request[2]=[0, 0, 1]) <= (Work=[0, 1, 0]) False, P2 must wait
+i=3, (Request[3]=[1, 0, 0]) <= (Work=[0, 1, 0]) False, P3 must wait
+i=4, (Request[4]=[0, 0, 2]) <= (Work=[0, 1, 0]) False, P4 must wait
+i=0, Finish[0] is True, skipping
+i=1, (Request[1]=[2, 0, 2]) <= (Work=[0, 1, 0]) False, P1 must wait
+i=2, (Request[2]=[0, 0, 1]) <= (Work=[0, 1, 0]) False, P2 must wait
+i=3, (Request[3]=[1, 0, 0]) <= (Work=[0, 1, 0]) False, P3 must wait
+i=4, (Request[4]=[0, 0, 2]) <= (Work=[0, 1, 0]) False, P4 must wait
+i=0, Finish[0] is True, skipping
+i=1, (Request[1]=[2, 0, 2]) <= (Work=[0, 1, 0]) False, P1 must wait
+i=2, (Request[2]=[0, 0, 1]) <= (Work=[0, 1, 0]) False, P2 must wait
+i=3, (Request[3]=[1, 0, 0]) <= (Work=[0, 1, 0]) False, P3 must wait
+i=4, (Request[4]=[0, 0, 2]) <= (Work=[0, 1, 0]) False, P4 must wait
+i=0, Finish[0] is True, skipping
+i=1, (Request[1]=[2, 0, 2]) <= (Work=[0, 1, 0]) False, P1 must wait
+i=2, (Request[2]=[0, 0, 1]) <= (Work=[0, 1, 0]) False, P2 must wait
+i=3, (Request[3]=[1, 0, 0]) <= (Work=[0, 1, 0]) False, P3 must wait
+i=4, (Request[4]=[0, 0, 2]) <= (Work=[0, 1, 0]) False, P4 must wait
+i=0, Finish[0] is True, skipping
+i=1, (Request[1]=[2, 0, 2]) <= (Work=[0, 1, 0]) False, P1 must wait
+i=2, (Request[2]=[0, 0, 1]) <= (Work=[0, 1, 0]) False, P2 must wait
+i=3, (Request[3]=[1, 0, 0]) <= (Work=[0, 1, 0]) False, P3 must wait
+i=4, (Request[4]=[0, 0, 2]) <= (Work=[0, 1, 0]) False, P4 must wait
+deadlock
+bash-3.2$ exit
+
+Script done on Fri Nov  3 02:40:21 2017

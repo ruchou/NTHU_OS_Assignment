@@ -1,0 +1,44 @@
+Script started on Fri Nov  3 02:39:18 2017
+[?1034hbash-3.2$ ls
+banker.py	detect.py	graph.py	typescript	typescript1
+bash-3.2$ python3 banker.py 
+Testing Utility Functions:
+A = [1, 2, 1], B = [1, 0, 2], 
+A += B is [2, 2, 3], expect [2, 2, 3]
+A -= B is [1, 2, 1], expect [1, 2, 1]
+A > B is True, expect True; A <= B is False, expect False
+A = [1, 2, 3], B = [2, 2, 4], 
+A += B is [3, 4, 7], expect [3, 4, 7]
+A -= B is [1, 2, 3], expect [1, 2, 3]
+A > B is False, expect False; A <= B is True, expect True
+A = [2, 3, 3], B = [2, 3, 3], 
+A += B is [4, 6, 6], expect [4, 6, 6]
+A -= B is [2, 3, 3], expect [2, 3, 3]
+A > B is False, expect False; A <= B is True, expect True
+b.Available=[3, 3, 2], expect ([3, 3, 2],)
+b.Need=[[7, 4, 3], [1, 2, 2], [6, 0, 0], [0, 1, 1], [4, 3, 1]], expect [[7, 4, 3], [1, 2, 2], [6, 0, 0], [0, 1, 1], [4, 3, 1]]
+Need=[[7, 4, 3], [1, 2, 2], [6, 0, 0], [0, 1, 1], [4, 3, 1]], Available=[3, 3, 2]
+i=0, (Need[0]=[7, 4, 3]) <= ((Work=[3, 3, 2]) False, P0 must wait
+i=1, (Need[1]=[1, 2, 2]) <= ((Work=[3, 3, 2]) True, append P1
+i=2, (Need[2]=[6, 0, 0]) <= ((Work=[5, 3, 2]) False, P2 must wait
+i=3, (Need[3]=[0, 1, 1]) <= ((Work=[5, 3, 2]) True, append P3
+i=4, (Need[4]=[4, 3, 1]) <= ((Work=[7, 4, 3]) True, append P4
+i=0, (Need[0]=[7, 4, 3]) <= ((Work=[7, 4, 5]) True, append P0
+i=1 Finish[1] True, skipping
+i=2, (Need[2]=[6, 0, 0]) <= ((Work=[7, 5, 5]) True, append P2
+s is [1, 3, 4, 0, 2]
+Found safe sequence [1, 3, 4, 0, 2]
+P1 allocated [2, 0, 0], requesting [1, 0, 2], 
+ P1 releasing, available=[5, 3, 2]
+P3 allocated [2, 1, 1], requesting [0, 1, 1], 
+ P3 releasing, available=[7, 4, 3]
+P4 allocated [0, 0, 2], requesting [3, 3, 0], 
+ P4 releasing, available=[7, 4, 5]
+P0 allocated [0, 1, 0], requesting [0, 2, 0], 
+ P0 releasing, available=[7, 5, 5]
+P2 allocated [3, 0, 2], requesting [3, 0, 0], 
+ P2 releasing, available=[10, 5, 7]
+bash-3.2$ 
+bash-3.2$ exit
+
+Script done on Fri Nov  3 02:39:27 2017

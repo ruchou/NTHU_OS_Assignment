@@ -1,0 +1,30 @@
+Script started on 廿十七年十月二日 (週一) 十九時44分三秒
+]0;nthu-os@nthuos-VirtualBox: ~/Downloads[01;32mnthu-os@nthuos-VirtualBox[00m:[01;34m~/Downloads[00m$ netstat ps[Kython3 hw3.py ls[Kcd  Downloads/ls[Kcd file:///home/nthu-os/Downloads/[K/hw3.py[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Knet[Ktlen[K[K[K[Klen[K[Knet 1270.[K[K.0.0.1 8888
+No command 'nelnet' found, did you mean:
+ Command 'telnet' from package 'telnet' (main)
+ Command 'telnet' from package 'telnet-ssl' (universe)
+ Command 'telnet' from package 'inetutils-telnet' (universe)
+ Command 'newnet' from package 'newpid' (universe)
+nelnet: command not found
+]0;nthu-os@nthuos-VirtualBox: ~/Downloads[01;32mnthu-os@nthuos-VirtualBox[00m:[01;34m~/Downloads[00m$ nelnet 127.0.0.1 8888[C[C[C[C[1P[1@t
+Trying 127.0.0.1...
+Connected to 127.0.0.1.
+Escape character is '^]'.
+this is a book
+6
+hellow    world
+12
+iphone 8 
+14
+a lange & sho   Sh ohne
+17
+OS   s is great
+32
+motnba    ntbg lanc
+35
+di  this is python o socket
+40
+Connection closed by foreign host.
+]0;nthu-os@nthuos-VirtualBox: ~/Downloads[01;32mnthu-os@nthuos-VirtualBox[00m:[01;34m~/Downloads[00m$ exit
+
+Script done on 廿十七年十月二日 (週一) 十九時45分35秒

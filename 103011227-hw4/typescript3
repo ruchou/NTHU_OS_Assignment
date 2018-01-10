@@ -1,0 +1,13 @@
+Script started on Wed Oct 11 14:51:00 2017
+[?1034hbash-3.2$ ls
+main.c		qsortTh.c	quicksort.c	typescript
+qsortTh		quicksort	randomInt.txt
+bash-3.2$ g[Kcc -pthread qsortTh.c -o qsortTh
+bash-3.2$ time ./s[KqsortTh
+
+real	0m6.159s
+user	0m8.854s
+sys	0m0.371s
+bash-3.2$ exit
+
+Script done on Wed Oct 11 14:51:22 2017

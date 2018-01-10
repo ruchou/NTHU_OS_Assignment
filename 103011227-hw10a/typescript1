@@ -1,0 +1,11 @@
+Script started on Wed Dec  6 09:25:21 2017
+[?1034hbash-3.2$ ls
+__pycache__	cntlblks.py	pfs.py		typescript
+bash-3.2$ python3 [K cntlblks.py 
+input directory tree=('/', ('home/', ('u1/', 'hello.c'), ('u2/', 'world.h'), 'homefiles'), ('bin/', 'ls'), ('etc/',))
+tuple reconstructed from directory=('/', ('home/', ('u1/', 'hello.c'), ('u2/', 'world.h'), 'homefiles'), ('bin/', 'ls'), ('etc/',))
+creation time for /home/u1/hello.c is Wed Dec  6 09:25:27 2017
+bash-3.2$ 
+bash-3.2$ exit
+
+Script done on Wed Dec  6 09:25:32 2017

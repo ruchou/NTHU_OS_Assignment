@@ -1,0 +1,17 @@
+Script started on Fri Oct 27 20:11:43 2017
+[?1034hbash-3.2$ ls
+__pycache__	hw6both.py	npsched.py	psched.py	task.py		typescript3
+fifo.py		minheap.pyc	npsched.pyc	psched.pyc	task.pyc
+fifo.pyc	myout.txt	out.txt		r.py		typescript
+bash-3.2$ python3 psched.py
+tasks = [Task('A', 0, 7), Task('B', 2, 4), Task('C', 4, 1), Task('D', 5, 4)]
+preemptive SJF: A-A-B-B-C-B-B-D-D-D-D-A-A-A-A-A-None-None-None-None
+preemptive FCFS: A-A-A-A-A-A-A-B-B-B-B-C-D-D-D-D-None-None-None-None
+preemptive RR: A-A-B-A-B-C-A-D-B-A-D-B-A-D-A-D-None-None-None-None
+bash-3.2$ ls
+__pycache__	hw6both.py	npsched.py	psched.py	task.py		typescript3
+fifo.py		minheap.pyc	npsched.pyc	psched.pyc	task.pyc
+fifo.pyc	myout.txt	out.txt		r.py		typescript
+bash-3.2$ exit
+
+Script done on Fri Oct 27 20:11:59 2017

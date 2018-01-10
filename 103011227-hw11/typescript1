@@ -1,0 +1,15 @@
+Script started on Wed Dec  6 22:09:48 2017
+[?1034hbash-3.2$ ls
+__pycache__	disk.py		myout.txt	proc.py		sample2.txt	typescript
+cntlblks.py	hw11.pdf	pfs.py		sample1.txt	sample3.txt
+bash-3.2$ py[K[Kpython3 pdf[K[Kfd[K[K[K[K pd[Kfs.py 
+freeblocks={0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
+allocate (5)a={0, 1, 2, 3, 4}, (3)b={5, 6, 7}, (2)c={8, 9}, (1)d={10}, (4)e={11, 12, 13, 14}
+freeBlockSet={15}
+after freeBlocks({5, 6, 7}), freeBlockSet={7, 5, 6, 15}
+after freeBlocks({10}), freeBlockSet={5, 6, 7, 10, 15}
+after allocateBlocks(4)={10, 5, 6, 7}, freeBlockSet={15}
+after freeBlocks(a|c)={0, 1, 2, 3, 4, 8, 9}, freeBlockSet={0, 1, 2, 3, 4, 8, 9, 15}
+bash-3.2$ wq[K[Kexit
+
+Script done on Wed Dec  6 22:11:15 2017

@@ -1,0 +1,959 @@
+Script started on 廿十七年九月卅日 (週六) 十七時56分三秒
+]0;nthu-os@nthuos-VirtualBox: ~/Desktop/NachOS-4.0_MP1/code/test[01;32mnthu-os@nthuos-VirtualBox[00m:[01;34m~/Desktop/NachOS-4.0_MP1/code/test[00m$ cd ../build.linux/ [A
+]0;nthu-os@nthuos-VirtualBox: ~/Desktop/NachOS-4.0_MP1/code/build.linux[01;32mnthu-os@nthuos-VirtualBox[00m:[01;34m~/Desktop/NachOS-4.0_MP1/code/build.linux[00m$ ls
+addrspace.o  DISK_0       kernel.o      mipssim.o   scheduler.o     sysdep.o
+alarm.o      disk.o       libtest.o     [0m[01;32mnachos[0m      stats.o         thread.o
+bitmap.o     exception.o  machine.o     network.o   switch.o        timer.o
+console.o    filehdr.o    main.o        openfile.o  synchconsole.o  translate.o
+debug.o      filesys.o    Makefile      pbitmap.o   synchdisk.o
+directory.o  interrupt.o  Makefile.dep  post.o      synch.o
+]0;nthu-os@nthuos-VirtualBox: ~/Desktop/NachOS-4.0_MP1/code/build.linux[01;32mnthu-os@nthuos-VirtualBox[00m:[01;34m~/Desktop/NachOS-4.0_MP1/code/build.linux[00m$ make clean
+/bin/rm -f bitmap.o debug.o libtest.o sysdep.o interrupt.o stats.o timer.o console.o machine.o mipssim.o translate.o network.o disk.o alarm.o kernel.o main.o scheduler.o synch.o thread.o addrspace.o exception.o synchconsole.o directory.o filehdr.o filesys.o pbitmap.o openfile.o synchdisk.o post.o switch.o
+]0;nthu-os@nthuos-VirtualBox: ~/Desktop/NachOS-4.0_MP1/code/build.linux[01;32mnthu-os@nthuos-VirtualBox[00m:[01;34m~/Desktop/NachOS-4.0_MP1/code/build.linux[00m$ make
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../lib/bitmap.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../lib/debug.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../lib/libtest.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+[01m[K../lib/libtest.cc:59:46:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+   "7", "8", "9", "10", "11", "12", "13", "14"};
+[01;32m[K                                              ^[m[K
+[01m[K../lib/libtest.cc:59:46:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../lib/libtest.cc:59:46:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../lib/libtest.cc:59:46:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../lib/libtest.cc:59:46:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../lib/libtest.cc:59:46:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../lib/libtest.cc:59:46:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../lib/libtest.cc:59:46:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../lib/libtest.cc:59:46:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../lib/libtest.cc:59:46:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../lib/libtest.cc:59:46:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../lib/libtest.cc:59:46:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../lib/libtest.cc:59:46:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../lib/libtest.cc:59:46:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../lib/libtest.cc:59:46:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+In file included from [01m[K../lib/list.h:17:0[m[K,
+                 from [01m[K../lib/libtest.cc:12[m[K:
+../lib/list.cc: In instantiation of ‘[01m[Kvoid SortedList<T>::SelfTest(T*, int) [with T = int][m[K’:
+[01m[K../lib/libtest.cc:78:74:[m[K   required from here
+[01m[K../lib/list.cc:365:18:[m[K [01;35m[Kwarning: [m[K‘[01m[KIsInList[m[K’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+   ASSERT(IsInList(p[i]));
+[01;32m[K                  ^[m[K
+[01m[K../lib/debug.h:65:9:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KASSERT[m[K’
+     if (condition) {} else {       \
+[01;32m[K         ^[m[K
+[01m[K../lib/list.cc:365:18:[m[K [01;36m[Knote: [m[Kdeclarations in dependent base ‘[01m[KList<int>[m[K’ are not found by unqualified lookup
+   ASSERT(IsInList(p[i]));
+[01;32m[K                  ^[m[K
+[01m[K../lib/debug.h:65:9:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KASSERT[m[K’
+     if (condition) {} else {       \
+[01;32m[K         ^[m[K
+[01m[K../lib/list.cc:365:18:[m[K [01;36m[Knote: [m[Kuse ‘[01m[Kthis->IsInList[m[K’ instead
+   ASSERT(IsInList(p[i]));
+[01;32m[K                  ^[m[K
+[01m[K../lib/debug.h:65:9:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KASSERT[m[K’
+     if (condition) {} else {       \
+[01;32m[K         ^[m[K
+[01m[K../lib/list.cc:372:26:[m[K [01;35m[Kwarning: [m[K‘[01m[KIsInList[m[K’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+          ASSERT(!IsInList(q[i]));
+[01;32m[K                          ^[m[K
+[01m[K../lib/debug.h:65:9:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KASSERT[m[K’
+     if (condition) {} else {       \
+[01;32m[K         ^[m[K
+[01m[K../lib/list.cc:372:26:[m[K [01;36m[Knote: [m[Kdeclarations in dependent base ‘[01m[KList<int>[m[K’ are not found by unqualified lookup
+          ASSERT(!IsInList(q[i]));
+[01;32m[K                          ^[m[K
+[01m[K../lib/debug.h:65:9:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KASSERT[m[K’
+     if (condition) {} else {       \
+[01;32m[K         ^[m[K
+[01m[K../lib/list.cc:372:26:[m[K [01;36m[Knote: [m[Kuse ‘[01m[Kthis->IsInList[m[K’ instead
+          ASSERT(!IsInList(q[i]));
+[01;32m[K                          ^[m[K
+[01m[K../lib/debug.h:65:9:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KASSERT[m[K’
+     if (condition) {} else {       \
+[01;32m[K         ^[m[K
+../lib/list.cc: In instantiation of ‘[01m[Kvoid SortedList<T>::Insert(T) [with T = int][m[K’:
+[01m[K../lib/list.cc:364:9:[m[K   required from ‘[01m[Kvoid SortedList<T>::SelfTest(T*, int) [with T = int][m[K’
+[01m[K../lib/libtest.cc:78:74:[m[K   required from here
+[01m[K../lib/list.cc:239:21:[m[K [01;35m[Kwarning: [m[K‘[01m[KIsInList[m[K’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     ASSERT(!IsInList(item));
+[01;32m[K                     ^[m[K
+[01m[K../lib/debug.h:65:9:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KASSERT[m[K’
+     if (condition) {} else {       \
+[01;32m[K         ^[m[K
+[01m[K../lib/list.cc:239:21:[m[K [01;36m[Knote: [m[Kdeclarations in dependent base ‘[01m[KList<int>[m[K’ are not found by unqualified lookup
+     ASSERT(!IsInList(item));
+[01;32m[K                     ^[m[K
+[01m[K../lib/debug.h:65:9:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KASSERT[m[K’
+     if (condition) {} else {       \
+[01;32m[K         ^[m[K
+[01m[K../lib/list.cc:239:21:[m[K [01;36m[Knote: [m[Kuse ‘[01m[Kthis->IsInList[m[K’ instead
+     ASSERT(!IsInList(item));
+[01;32m[K                     ^[m[K
+[01m[K../lib/debug.h:65:9:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KASSERT[m[K’
+     if (condition) {} else {       \
+[01;32m[K         ^[m[K
+[01m[K../lib/list.cc:259:20:[m[K [01;35m[Kwarning: [m[K‘[01m[KIsInList[m[K’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     ASSERT(IsInList(item));
+[01;32m[K                    ^[m[K
+[01m[K../lib/debug.h:65:9:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KASSERT[m[K’
+     if (condition) {} else {       \
+[01;32m[K         ^[m[K
+[01m[K../lib/list.cc:259:20:[m[K [01;36m[Knote: [m[Kdeclarations in dependent base ‘[01m[KList<int>[m[K’ are not found by unqualified lookup
+     ASSERT(IsInList(item));
+[01;32m[K                    ^[m[K
+[01m[K../lib/debug.h:65:9:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KASSERT[m[K’
+     if (condition) {} else {       \
+[01;32m[K         ^[m[K
+[01m[K../lib/list.cc:259:20:[m[K [01;36m[Knote: [m[Kuse ‘[01m[Kthis->IsInList[m[K’ instead
+     ASSERT(IsInList(item));
+[01;32m[K                    ^[m[K
+[01m[K../lib/debug.h:65:9:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KASSERT[m[K’
+     if (condition) {} else {       \
+[01;32m[K         ^[m[K
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../lib/sysdep.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../machine/interrupt.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+[01m[K../machine/interrupt.cc:29:45:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+ static char *intLevelNames[] = { "off", "on"};
+[01;32m[K                                             ^[m[K
+[01m[K../machine/interrupt.cc:29:45:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/interrupt.cc:32:18:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+    "network recv"};
+[01;32m[K                  ^[m[K
+[01m[K../machine/interrupt.cc:32:18:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/interrupt.cc:32:18:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/interrupt.cc:32:18:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/interrupt.cc:32:18:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/interrupt.cc:32:18:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+In file included from [01m[K../lib/list.h:17:0[m[K,
+                 from [01m[K../machine/interrupt.h:37[m[K,
+                 from [01m[K../machine/interrupt.cc:24[m[K:
+../lib/list.cc: In instantiation of ‘[01m[Kvoid SortedList<T>::Insert(T) [with T = PendingInterrupt*][m[K’:
+[01m[K../machine/interrupt.cc:273:28:[m[K   required from here
+[01m[K../lib/list.cc:239:21:[m[K [01;35m[Kwarning: [m[K‘[01m[KIsInList[m[K’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     ASSERT(!IsInList(item));
+[01;32m[K                     ^[m[K
+[01m[K../lib/debug.h:65:9:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KASSERT[m[K’
+     if (condition) {} else {       \
+[01;32m[K         ^[m[K
+[01m[K../lib/list.cc:239:21:[m[K [01;36m[Knote: [m[Kdeclarations in dependent base ‘[01m[KList<PendingInterrupt*>[m[K’ are not found by unqualified lookup
+     ASSERT(!IsInList(item));
+[01;32m[K                     ^[m[K
+[01m[K../lib/debug.h:65:9:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KASSERT[m[K’
+     if (condition) {} else {       \
+[01;32m[K         ^[m[K
+[01m[K../lib/list.cc:239:21:[m[K [01;36m[Knote: [m[Kuse ‘[01m[Kthis->IsInList[m[K’ instead
+     ASSERT(!IsInList(item));
+[01;32m[K                     ^[m[K
+[01m[K../lib/debug.h:65:9:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KASSERT[m[K’
+     if (condition) {} else {       \
+[01;32m[K         ^[m[K
+[01m[K../lib/list.cc:259:20:[m[K [01;35m[Kwarning: [m[K‘[01m[KIsInList[m[K’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     ASSERT(IsInList(item));
+[01;32m[K                    ^[m[K
+[01m[K../lib/debug.h:65:9:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KASSERT[m[K’
+     if (condition) {} else {       \
+[01;32m[K         ^[m[K
+[01m[K../lib/list.cc:259:20:[m[K [01;36m[Knote: [m[Kdeclarations in dependent base ‘[01m[KList<PendingInterrupt*>[m[K’ are not found by unqualified lookup
+     ASSERT(IsInList(item));
+[01;32m[K                    ^[m[K
+[01m[K../lib/debug.h:65:9:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KASSERT[m[K’
+     if (condition) {} else {       \
+[01;32m[K         ^[m[K
+[01m[K../lib/list.cc:259:20:[m[K [01;36m[Knote: [m[Kuse ‘[01m[Kthis->IsInList[m[K’ instead
+     ASSERT(IsInList(item));
+[01;32m[K                    ^[m[K
+[01m[K../lib/debug.h:65:9:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KASSERT[m[K’
+     if (condition) {} else {       \
+[01;32m[K         ^[m[K
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../machine/stats.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../machine/timer.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../machine/console.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../machine/machine.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+[01m[K../machine/machine.cc:19:27:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     "illegal instruction" };
+[01;32m[K                           ^[m[K
+[01m[K../machine/machine.cc:19:27:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/machine.cc:19:27:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/machine.cc:19:27:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/machine.cc:19:27:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/machine.cc:19:27:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/machine.cc:19:27:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/machine.cc:19:27:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../machine/mipssim.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+In file included from [01m[K../machine/mipssim.cc:22:0[m[K:
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+       };
+[01;32m[K       ^[m[K
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.h:227:7:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+[01m[K../machine/mipssim.cc:[m[K In member function ‘[01m[Kvoid Machine::OneInstruction(Instruction*)[m[K’:
+[01m[K../machine/mipssim.cc:139:56:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+         struct OpString *str = &opStrings[instr->opCode];
+[01;32m[K                                                        ^[m[K
+[01m[K../machine/mipssim.cc:158:27:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  sum = registers[instr->rs] + registers[instr->rt];
+[01;32m[K                           ^[m[K
+[01m[K../machine/mipssim.cc:158:50:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  sum = registers[instr->rs] + registers[instr->rt];
+[01;32m[K                                                  ^[m[K
+[01m[K../machine/mipssim.cc:159:28:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  if (!((registers[instr->rs] ^ registers[instr->rt]) & SIGN_BIT) &&
+[01;32m[K                            ^[m[K
+[01m[K../machine/mipssim.cc:159:51:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  if (!((registers[instr->rs] ^ registers[instr->rt]) & SIGN_BIT) &&
+[01;32m[K                                                   ^[m[K
+[01m[K../machine/mipssim.cc:160:27:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      ((registers[instr->rs] ^ sum) & SIGN_BIT)) {
+[01;32m[K                           ^[m[K
+[01m[K../machine/mipssim.cc:164:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = sum;
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:168:27:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  sum = registers[instr->rs] + instr->extra;
+[01;32m[K                           ^[m[K
+[01m[K../machine/mipssim.cc:169:28:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  if (!((registers[instr->rs] ^ instr->extra) & SIGN_BIT) &&
+[01;32m[K                            ^[m[K
+[01m[K../machine/mipssim.cc:174:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rt] = sum;
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:178:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rt] = registers[instr->rs] + instr->extra;
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:178:44:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rt] = registers[instr->rs] + instr->extra;
+[01;32m[K                                            ^[m[K
+[01m[K../machine/mipssim.cc:182:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rs] + registers[instr->rt];
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:182:44:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rs] + registers[instr->rt];
+[01;32m[K                                            ^[m[K
+[01m[K../machine/mipssim.cc:182:67:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rs] + registers[instr->rt];
+[01;32m[K                                                                   ^[m[K
+[01m[K../machine/mipssim.cc:186:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rs] & registers[instr->rt];
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:186:44:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rs] & registers[instr->rt];
+[01;32m[K                                            ^[m[K
+[01m[K../machine/mipssim.cc:186:67:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rs] & registers[instr->rt];
+[01;32m[K                                                                   ^[m[K
+[01m[K../machine/mipssim.cc:190:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rt] = registers[instr->rs] & (instr->extra & 0xffff);
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:190:44:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rt] = registers[instr->rs] & (instr->extra & 0xffff);
+[01;32m[K                                            ^[m[K
+[01m[K../machine/mipssim.cc:194:25:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  if (registers[instr->rs] == registers[instr->rt])
+[01;32m[K                         ^[m[K
+[01m[K../machine/mipssim.cc:194:49:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  if (registers[instr->rs] == registers[instr->rt])
+[01;32m[K                                                 ^[m[K
+[01m[K../machine/mipssim.cc:201:27:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  if (!(registers[instr->rs] & SIGN_BIT))
+[01;32m[K                           ^[m[K
+[01m[K../machine/mipssim.cc:206:25:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  if (registers[instr->rs] > 0)
+[01;32m[K                         ^[m[K
+[01m[K../machine/mipssim.cc:211:25:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  if (registers[instr->rs] <= 0)
+[01;32m[K                         ^[m[K
+[01m[K../machine/mipssim.cc:218:25:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  if (registers[instr->rs] & SIGN_BIT)
+[01;32m[K                         ^[m[K
+[01m[K../machine/mipssim.cc:223:25:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  if (registers[instr->rs] != registers[instr->rt])
+[01;32m[K                         ^[m[K
+[01m[K../machine/mipssim.cc:223:49:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  if (registers[instr->rs] != registers[instr->rt])
+[01;32m[K                                                 ^[m[K
+[01m[K../machine/mipssim.cc:228:25:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  if (registers[instr->rt] == 0) {
+[01;32m[K                         ^[m[K
+[01m[K../machine/mipssim.cc:232:45:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      registers[LoReg] =  registers[instr->rs] / registers[instr->rt];
+[01;32m[K                                             ^[m[K
+[01m[K../machine/mipssim.cc:232:68:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      registers[LoReg] =  registers[instr->rs] / registers[instr->rt];
+[01;32m[K                                                                    ^[m[K
+[01m[K../machine/mipssim.cc:233:44:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      registers[HiReg] = registers[instr->rs] % registers[instr->rt];
+[01;32m[K                                            ^[m[K
+[01m[K../machine/mipssim.cc:233:67:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      registers[HiReg] = registers[instr->rs] % registers[instr->rt];
+[01;32m[K                                                                   ^[m[K
+[01m[K../machine/mipssim.cc:238:43:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+    rs = (unsigned int) registers[instr->rs];
+[01;32m[K                                           ^[m[K
+[01m[K../machine/mipssim.cc:239:43:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+    rt = (unsigned int) registers[instr->rt];
+[01;32m[K                                           ^[m[K
+[01m[K../machine/mipssim.cc:258:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[NextPCReg] + 4;
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:260:31:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  pcAfter = registers[instr->rs];
+[01;32m[K                               ^[m[K
+[01m[K../machine/mipssim.cc:265:27:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  tmp = registers[instr->rs] + instr->extra;
+[01;32m[K                           ^[m[K
+[01m[K../machine/mipssim.cc:279:27:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  tmp = registers[instr->rs] + instr->extra;
+[01;32m[K                           ^[m[K
+[01m[K../machine/mipssim.cc:297:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rt] = instr->extra << 16;
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:301:27:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  tmp = registers[instr->rs] + instr->extra;
+[01;32m[K                           ^[m[K
+[01m[K../machine/mipssim.cc:313:27:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  tmp = registers[instr->rs] + instr->extra;
+[01;32m[K                           ^[m[K
+[01m[K../machine/mipssim.cc:341:41:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      nextLoadValue = registers[instr->rt];
+[01;32m[K                                         ^[m[K
+[01m[K../machine/mipssim.cc:365:27:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  tmp = registers[instr->rs] + instr->extra;
+[01;32m[K                           ^[m[K
+[01m[K../machine/mipssim.cc:393:41:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      nextLoadValue = registers[instr->rt];
+[01;32m[K                                         ^[m[K
+[01m[K../machine/mipssim.cc:421:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[HiReg];
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:425:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[LoReg];
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:429:40:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[HiReg] = registers[instr->rs];
+[01;32m[K                                        ^[m[K
+[01m[K../machine/mipssim.cc:433:40:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[LoReg] = registers[instr->rs];
+[01;32m[K                                        ^[m[K
+[01m[K../machine/mipssim.cc:437:26:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  Mult(registers[instr->rs], registers[instr->rt], TRUE,
+[01;32m[K                          ^[m[K
+[01m[K../machine/mipssim.cc:437:48:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  Mult(registers[instr->rs], registers[instr->rt], TRUE,
+[01;32m[K                                                ^[m[K
+[01m[K../machine/mipssim.cc:442:26:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  Mult(registers[instr->rs], registers[instr->rt], FALSE,
+[01;32m[K                          ^[m[K
+[01m[K../machine/mipssim.cc:442:48:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  Mult(registers[instr->rs], registers[instr->rt], FALSE,
+[01;32m[K                                                ^[m[K
+[01m[K../machine/mipssim.cc:447:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = ~(registers[instr->rs] | registers[instr->rt]);
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:447:46:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = ~(registers[instr->rs] | registers[instr->rt]);
+[01;32m[K                                              ^[m[K
+[01m[K../machine/mipssim.cc:447:69:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = ~(registers[instr->rs] | registers[instr->rt]);
+[01;32m[K                                                                     ^[m[K
+[01m[K../machine/mipssim.cc:451:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rs] | registers[instr->rt];
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:451:44:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rs] | registers[instr->rt];
+[01;32m[K                                            ^[m[K
+[01m[K../machine/mipssim.cc:451:67:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rs] | registers[instr->rt];
+[01;32m[K                                                                   ^[m[K
+[01m[K../machine/mipssim.cc:455:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rt] = registers[instr->rs] | (instr->extra & 0xffff);
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:455:44:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rt] = registers[instr->rs] | (instr->extra & 0xffff);
+[01;32m[K                                            ^[m[K
+[01m[K../machine/mipssim.cc:460:23:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+   (registers[instr->rs] + instr->extra), 1, registers[instr->rt]))
+[01;32m[K                       ^[m[K
+[01m[K../machine/mipssim.cc:460:64:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+   (registers[instr->rs] + instr->extra), 1, registers[instr->rt]))
+[01;32m[K                                                                ^[m[K
+[01m[K../machine/mipssim.cc:466:23:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+   (registers[instr->rs] + instr->extra), 2, registers[instr->rt]))
+[01;32m[K                       ^[m[K
+[01m[K../machine/mipssim.cc:466:64:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+   (registers[instr->rs] + instr->extra), 2, registers[instr->rt]))
+[01;32m[K                                                                ^[m[K
+[01m[K../machine/mipssim.cc:471:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rt] << instr->extra;
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:471:44:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rt] << instr->extra;
+[01;32m[K                                            ^[m[K
+[01m[K../machine/mipssim.cc:475:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rt] <<
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:475:44:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rt] <<
+[01;32m[K                                            ^[m[K
+[01m[K../machine/mipssim.cc:476:26:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      (registers[instr->rs] & 0x1f);
+[01;32m[K                          ^[m[K
+[01m[K../machine/mipssim.cc:480:25:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  if (registers[instr->rs] < registers[instr->rt])
+[01;32m[K                         ^[m[K
+[01m[K../machine/mipssim.cc:480:48:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  if (registers[instr->rs] < registers[instr->rt])
+[01;32m[K                                                ^[m[K
+[01m[K../machine/mipssim.cc:481:25:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      registers[instr->rd] = 1;
+[01;32m[K                         ^[m[K
+[01m[K../machine/mipssim.cc:483:25:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      registers[instr->rd] = 0;
+[01;32m[K                         ^[m[K
+[01m[K../machine/mipssim.cc:487:25:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  if (registers[instr->rs] < instr->extra)
+[01;32m[K                         ^[m[K
+[01m[K../machine/mipssim.cc:488:25:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      registers[instr->rt] = 1;
+[01;32m[K                         ^[m[K
+[01m[K../machine/mipssim.cc:490:25:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      registers[instr->rt] = 0;
+[01;32m[K                         ^[m[K
+[01m[K../machine/mipssim.cc:494:26:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  rs = registers[instr->rs];
+[01;32m[K                          ^[m[K
+[01m[K../machine/mipssim.cc:497:25:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      registers[instr->rt] = 1;
+[01;32m[K                         ^[m[K
+[01m[K../machine/mipssim.cc:499:25:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      registers[instr->rt] = 0;
+[01;32m[K                         ^[m[K
+[01m[K../machine/mipssim.cc:503:26:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  rs = registers[instr->rs];
+[01;32m[K                          ^[m[K
+[01m[K../machine/mipssim.cc:504:26:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  rt = registers[instr->rt];
+[01;32m[K                          ^[m[K
+[01m[K../machine/mipssim.cc:506:25:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      registers[instr->rd] = 1;
+[01;32m[K                         ^[m[K
+[01m[K../machine/mipssim.cc:508:25:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      registers[instr->rd] = 0;
+[01;32m[K                         ^[m[K
+[01m[K../machine/mipssim.cc:512:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rt] >> instr->extra;
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:512:44:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rt] >> instr->extra;
+[01;32m[K                                            ^[m[K
+[01m[K../machine/mipssim.cc:516:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rt] >>
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:516:44:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rt] >>
+[01;32m[K                                            ^[m[K
+[01m[K../machine/mipssim.cc:517:26:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      (registers[instr->rs] & 0x1f);
+[01;32m[K                          ^[m[K
+[01m[K../machine/mipssim.cc:521:27:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  tmp = registers[instr->rt];
+[01;32m[K                           ^[m[K
+[01m[K../machine/mipssim.cc:523:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = tmp;
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:527:27:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  tmp = registers[instr->rt];
+[01;32m[K                           ^[m[K
+[01m[K../machine/mipssim.cc:528:30:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  tmp >>= (registers[instr->rs] & 0x1f);
+[01;32m[K                              ^[m[K
+[01m[K../machine/mipssim.cc:529:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = tmp;
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:533:28:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  diff = registers[instr->rs] - registers[instr->rt];
+[01;32m[K                            ^[m[K
+[01m[K../machine/mipssim.cc:533:51:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  diff = registers[instr->rs] - registers[instr->rt];
+[01;32m[K                                                   ^[m[K
+[01m[K../machine/mipssim.cc:534:27:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  if (((registers[instr->rs] ^ registers[instr->rt]) & SIGN_BIT) &&
+[01;32m[K                           ^[m[K
+[01m[K../machine/mipssim.cc:534:50:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  if (((registers[instr->rs] ^ registers[instr->rt]) & SIGN_BIT) &&
+[01;32m[K                                                  ^[m[K
+[01m[K../machine/mipssim.cc:535:27:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      ((registers[instr->rs] ^ diff) & SIGN_BIT)) {
+[01;32m[K                           ^[m[K
+[01m[K../machine/mipssim.cc:539:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = diff;
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:543:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rs] - registers[instr->rt];
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:543:44:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rs] - registers[instr->rt];
+[01;32m[K                                            ^[m[K
+[01m[K../machine/mipssim.cc:543:67:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rs] - registers[instr->rt];
+[01;32m[K                                                                   ^[m[K
+[01m[K../machine/mipssim.cc:548:23:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+   (registers[instr->rs] + instr->extra), 4, registers[instr->rt]))
+[01;32m[K                       ^[m[K
+[01m[K../machine/mipssim.cc:548:64:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+   (registers[instr->rs] + instr->extra), 4, registers[instr->rt]))
+[01;32m[K                                                                ^[m[K
+[01m[K../machine/mipssim.cc:553:27:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  tmp = registers[instr->rs] + instr->extra;
+[01;32m[K                           ^[m[K
+[01m[K../machine/mipssim.cc:585:33:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      value = registers[instr->rt];
+[01;32m[K                                 ^[m[K
+[01m[K../machine/mipssim.cc:588:58:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      value = (value & 0xff000000) | ((registers[instr->rt] >> 8) &
+[01;32m[K                                                          ^[m[K
+[01m[K../machine/mipssim.cc:592:58:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      value = (value & 0xffff0000) | ((registers[instr->rt] >> 16) &
+[01;32m[K                                                          ^[m[K
+[01m[K../machine/mipssim.cc:596:58:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      value = (value & 0xffffff00) | ((registers[instr->rt] >> 24) &
+[01;32m[K                                                          ^[m[K
+[01m[K../machine/mipssim.cc:612:27:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  tmp = registers[instr->rs] + instr->extra;
+[01;32m[K                           ^[m[K
+[01m[K../machine/mipssim.cc:644:55:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      value = (value & 0xffffff) | (registers[instr->rt] << 24);
+[01;32m[K                                                       ^[m[K
+[01m[K../machine/mipssim.cc:647:53:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      value = (value & 0xffff) | (registers[instr->rt] << 16);
+[01;32m[K                                                     ^[m[K
+[01m[K../machine/mipssim.cc:650:51:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      value = (value & 0xff) | (registers[instr->rt] << 8);
+[01;32m[K                                                   ^[m[K
+[01m[K../machine/mipssim.cc:653:33:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+      value = registers[instr->rt];
+[01;32m[K                                 ^[m[K
+[01m[K../machine/mipssim.cc:675:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rs] ^ registers[instr->rt];
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:675:44:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rs] ^ registers[instr->rt];
+[01;32m[K                                            ^[m[K
+[01m[K../machine/mipssim.cc:675:67:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rd] = registers[instr->rs] ^ registers[instr->rt];
+[01;32m[K                                                                   ^[m[K
+[01m[K../machine/mipssim.cc:679:21:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rt] = registers[instr->rs] ^ (instr->extra & 0xffff);
+[01;32m[K                     ^[m[K
+[01m[K../machine/mipssim.cc:679:44:[m[K [01;35m[Kwarning: [m[Karray subscript has type ‘[01m[Kchar[m[K’ [-Wchar-subscripts]
+  registers[instr->rt] = registers[instr->rs] ^ (instr->extra & 0xffff);
+[01;32m[K                                            ^[m[K
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../machine/translate.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../machine/network.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../machine/disk.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../threads/alarm.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../threads/kernel.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+[01m[K../threads/kernel.cc:[m[K In member function ‘[01m[Kvoid Kernel::Initialize()[m[K’:
+[01m[K../threads/kernel.cc:98:51:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     currentThread = new Thread("main", threadNum++);  
+[01;32m[K                                                   ^[m[K
+[01m[K../threads/kernel.cc:[m[K In member function ‘[01m[Kvoid Kernel::ThreadSelfTest()[m[K’:
+[01m[K../threads/kernel.cc:157:39:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+    semaphore = new Semaphore("test", 0);
+[01;32m[K                                       ^[m[K
+[01m[K../threads/kernel.cc:[m[K In member function ‘[01m[Kvoid Kernel::NetworkTest()[m[K’:
+[01m[K../threads/kernel.cc:213:22:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+         char *data = "Hello there!";
+[01;32m[K                      ^[m[K
+[01m[K../threads/kernel.cc:214:21:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+         char *ack = "Got it!";
+[01;32m[K                     ^[m[K
+[01m[K../threads/kernel.cc:[m[K In member function ‘[01m[Kvoid Kernel::ExecAll()[m[K’:
+[01m[K../threads/kernel.cc:264:7:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ka[m[K’ [-Wunused-variable]
+   int a = Exec(execfile[i]);
+[01;32m[K       ^[m[K
+In file included from [01m[K../threads/synchlist.h:49:0[m[K,
+                 from [01m[K../threads/kernel.cc:14[m[K:
+../threads/synchlist.cc: In instantiation of ‘[01m[KSynchList<T>::SynchList() [with T = int][m[K’:
+[01m[K../threads/kernel.cc:163:20:[m[K   required from here
+[01m[K../threads/synchlist.cc:26:10:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     lock = new Lock("list lock"); 
+[01;32m[K          ^[m[K
+[01m[K../threads/synchlist.cc:27:15:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     listEmpty = new Condition("list empty cond");
+[01;32m[K               ^[m[K
+../threads/synchlist.cc: In instantiation of ‘[01m[Kvoid SynchList<T>::SelfTest(T) [with T = int][m[K’:
+[01m[K../threads/kernel.cc:164:25:[m[K   required from here
+[01m[K../threads/synchlist.cc:120:42:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     Thread *helper = new Thread("ping", 1);
+[01;32m[K                                          ^[m[K
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../threads/main.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+In file included from [01m[K../threads/main.cc:41:0[m[K:
+[01m[K../lib/copyright.h:23:26:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+ static char *copyright = "Copyright (c) 1992-1993 The Regents of the University
+[01;32m[K                          ^[m[K
+[01m[K../threads/main.cc:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K../threads/main.cc:170:22:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     char *debugArg = "";
+[01;32m[K                      ^[m[K
+[01m[K../threads/main.cc:171:11:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[KuserProgName[m[K’ set but not used [-Wunused-but-set-variable]
+     char *userProgName = NULL;        // default is not to execute a user prog
+[01;32m[K           ^[m[K
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../threads/scheduler.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../threads/synch.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+[01m[K../threads/synch.cc:[m[K In member function ‘[01m[Kvoid Semaphore::SelfTest()[m[K’:
+[01m[K../threads/synch.cc:138:42:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     Thread *helper = new Thread("ping", 1);
+[01;32m[K                                          ^[m[K
+[01m[K../threads/synch.cc:141:35:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     ping = new Semaphore("ping", 0);
+[01;32m[K                                   ^[m[K
+[01m[K../threads/synch.cc:[m[K In constructor ‘[01m[KLock::Lock(char*)[m[K’:
+[01m[K../threads/synch.cc:161:40:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     semaphore = new Semaphore("lock", 1);  // initially, unlocked
+[01;32m[K                                        ^[m[K
+[01m[K../threads/synch.cc:[m[K In member function ‘[01m[Kvoid Condition::Wait(Lock*)[m[K’:
+[01m[K../threads/synch.cc:250:43:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+      waiter = new Semaphore("condition", 0);
+[01;32m[K                                           ^[m[K
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../threads/thread.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+[01m[K../threads/thread.cc:[m[K In member function ‘[01m[Kvoid Thread::SelfTest()[m[K’:
+[01m[K../threads/thread.cc:430:46:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     Thread *t = new Thread("forked thread", 1);
+[01;32m[K                                              ^[m[K
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../userprog/addrspace.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../userprog/exception.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+In file included from [01m[K../userprog/exception.cc:26:0[m[K:
+[01m[K../userprog/exception.cc:[m[K In function ‘[01m[Kvoid ExceptionHandler(ExceptionType)[m[K’:
+[01m[K../userprog/syscall.h:38:17:[m[K [01;35m[Kwarning: [m[Kjump to case label [-fpermissive]
+ #define SC_MSG  100
+[01;32m[K                 ^[m[K
+[01m[K../userprog/exception.cc:92:8:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KSC_MSG[m[K’
+   case SC_MSG:
+[01;32m[K        ^[m[K
+[01m[K../userprog/exception.cc:77:8:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kint size[m[K’
+    int size=kernel->machine->ReadRegister(5); //arg2 12
+[01;32m[K        ^[m[K
+[01m[K../userprog/exception.cc:74:10:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kchar* msg[m[K’
+    char *msg = &(kernel->machine->mainMemory[val]);//pointer
+[01;32m[K          ^[m[K
+In file included from [01m[K../userprog/exception.cc:26:0[m[K:
+[01m[K../userprog/syscall.h:25:19:[m[K [01;35m[Kwarning: [m[Kjump to case label [-fpermissive]
+ #define SC_Create 4
+[01;32m[K                   ^[m[K
+[01m[K../userprog/exception.cc:102:8:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KSC_Create[m[K’
+   case SC_Create:
+[01;32m[K        ^[m[K
+[01m[K../userprog/exception.cc:77:8:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kint size[m[K’
+    int size=kernel->machine->ReadRegister(5); //arg2 12
+[01;32m[K        ^[m[K
+[01m[K../userprog/exception.cc:74:10:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kchar* msg[m[K’
+    char *msg = &(kernel->machine->mainMemory[val]);//pointer
+[01;32m[K          ^[m[K
+In file included from [01m[K../userprog/exception.cc:26:0[m[K:
+[01m[K../userprog/syscall.h:37:17:[m[K [01;35m[Kwarning: [m[Kjump to case label [-fpermissive]
+ #define SC_Add  42
+[01;32m[K                 ^[m[K
+[01m[K../userprog/exception.cc:116:13:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KSC_Add[m[K’
+        case SC_Add:
+[01;32m[K             ^[m[K
+[01m[K../userprog/exception.cc:77:8:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kint size[m[K’
+    int size=kernel->machine->ReadRegister(5); //arg2 12
+[01;32m[K        ^[m[K
+[01m[K../userprog/exception.cc:74:10:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kchar* msg[m[K’
+    char *msg = &(kernel->machine->mainMemory[val]);//pointer
+[01;32m[K          ^[m[K
+In file included from [01m[K../userprog/exception.cc:26:0[m[K:
+[01m[K../userprog/syscall.h:22:18:[m[K [01;35m[Kwarning: [m[Kjump to case label [-fpermissive]
+ #define SC_Exit  1
+[01;32m[K                  ^[m[K
+[01m[K../userprog/exception.cc:140:8:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KSC_Exit[m[K’
+   case SC_Exit:
+[01;32m[K        ^[m[K
+[01m[K../userprog/exception.cc:77:8:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kint size[m[K’
+    int size=kernel->machine->ReadRegister(5); //arg2 12
+[01;32m[K        ^[m[K
+[01m[K../userprog/exception.cc:74:10:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kchar* msg[m[K’
+    char *msg = &(kernel->machine->mainMemory[val]);//pointer
+[01;32m[K          ^[m[K
+[01m[K../userprog/exception.cc:147:8:[m[K [01;35m[Kwarning: [m[Kjump to case label [-fpermissive]
+        default:
+[01;32m[K        ^[m[K
+[01m[K../userprog/exception.cc:77:8:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kint size[m[K’
+    int size=kernel->machine->ReadRegister(5); //arg2 12
+[01;32m[K        ^[m[K
+[01m[K../userprog/exception.cc:74:10:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kchar* msg[m[K’
+    char *msg = &(kernel->machine->mainMemory[val]);//pointer
+[01;32m[K          ^[m[K
+[01m[K../userprog/exception.cc:56:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kexit[m[K’ [-Wunused-variable]
+     int status, exit, threadID, programID;
+[01;32m[K                 ^[m[K
+[01m[K../userprog/exception.cc:56:23:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KthreadID[m[K’ [-Wunused-variable]
+     int status, exit, threadID, programID;
+[01;32m[K                       ^[m[K
+[01m[K../userprog/exception.cc:56:33:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KprogramID[m[K’ [-Wunused-variable]
+     int status, exit, threadID, programID;
+[01;32m[K                                 ^[m[K
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../userprog/synchconsole.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+[01m[K../userprog/synchconsole.cc:[m[K In constructor ‘[01m[KSynchConsoleInput::SynchConsoleInput(char*)[m[K’:
+[01m[K../userprog/synchconsole.cc:23:33:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     lock = new Lock("console in");
+[01;32m[K                                 ^[m[K
+[01m[K../userprog/synchconsole.cc:24:44:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     waitFor = new Semaphore("console in", 0);
+[01;32m[K                                            ^[m[K
+[01m[K../userprog/synchconsole.cc:[m[K In constructor ‘[01m[KSynchConsoleOutput::SynchConsoleOutput(char*)[m[K’:
+[01m[K../userprog/synchconsole.cc:79:34:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     lock = new Lock("console out");
+[01;32m[K                                  ^[m[K
+[01m[K../userprog/synchconsole.cc:80:45:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     waitFor = new Semaphore("console out", 0);
+[01;32m[K                                             ^[m[K
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../filesys/directory.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../filesys/filehdr.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../filesys/filesys.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../filesys/pbitmap.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../filesys/openfile.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../filesys/synchdisk.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+[01m[K../filesys/synchdisk.cc:[m[K In constructor ‘[01m[KSynchDisk::SynchDisk()[m[K’:
+[01m[K../filesys/synchdisk.cc:30:46:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     semaphore = new Semaphore("synch disk", 0);
+[01;32m[K                                              ^[m[K
+[01m[K../filesys/synchdisk.cc:31:38:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     lock = new Lock("synch disk lock");
+[01;32m[K                                      ^[m[K
+g++ -g -Wall -fpermissive -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -DFILESYS_STUB -DRDATA -DSIM_FIX -Dx86 -DLINUX -DCHANGED -m32 -c ../network/post.cc
+[01m[Kcc1plus:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+[01m[K../network/post.cc:[m[K In constructor ‘[01m[KPostOfficeInput::PostOfficeInput(int)[m[K’:
+[01m[K../network/post.cc:155:60:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     messageAvailable = new Semaphore("message available", 0);
+[01;32m[K                                                            ^[m[K
+[01m[K../network/post.cc:162:46:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     Thread *t = new Thread("postal worker", 1);
+[01;32m[K                                              ^[m[K
+[01m[K../network/post.cc:[m[K In constructor ‘[01m[KPostOfficeOutput::PostOfficeOutput(double)[m[K’:
+[01m[K../network/post.cc:268:50:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     messageSent = new Semaphore("message sent", 0);
+[01;32m[K                                                  ^[m[K
+[01m[K../network/post.cc:269:44:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     sendLock = new Lock("message send lock");
+[01;32m[K                                            ^[m[K
+In file included from [01m[K../threads/synchlist.h:49:0[m[K,
+                 from [01m[K../network/post.h:34[m[K,
+                 from [01m[K../network/post.cc:20[m[K:
+../threads/synchlist.cc: In instantiation of ‘[01m[KSynchList<T>::SynchList() [with T = Mail*][m[K’:
+[01m[K../network/post.cc:52:38:[m[K   required from here
+[01m[K../threads/synchlist.cc:26:10:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     lock = new Lock("list lock"); 
+[01;32m[K          ^[m[K
+[01m[K../threads/synchlist.cc:27:15:[m[K [01;35m[Kwarning: [m[Kdeprecated conversion from string constant to ‘[01m[Kchar*[m[K’ [-Wwrite-strings]
+     listEmpty = new Condition("list empty cond");
+[01;32m[K               ^[m[K
+g++ -m32 -P -I../network -I../filesys -I../userprog -I../threads -I../machine -I../lib -I- -Dx86 -DLINUX -c ../threads/switch.S
+[01m[Kcc1:[m[K [01;36m[Knote: [m[Kobsolete option -I- used, please use -iquote instead
+g++ bitmap.o debug.o libtest.o sysdep.o interrupt.o stats.o timer.o console.o machine.o mipssim.o translate.o network.o disk.o alarm.o kernel.o main.o scheduler.o synch.o thread.o addrspace.o exception.o synchconsole.o directory.o filehdr.o filesys.o pbitmap.o openfile.o synchdisk.o post.o switch.o -m32 -o nachos
+]0;nthu-os@nthuos-VirtualBox: ~/Desktop/NachOS-4.0_MP1/code/build.linux[01;32mnthu-os@nthuos-VirtualBox[00m:[01;34m~/Desktop/NachOS-4.0_MP1/code/build.linux[00m$ cd../test
+bash: cd../test: No such file or directory
+]0;nthu-os@nthuos-VirtualBox: ~/Desktop/NachOS-4.0_MP1/code/build.linux[01;32mnthu-os@nthuos-VirtualBox[00m:[01;34m~/Desktop/NachOS-4.0_MP1/code/build.linux[00m$ ls
+addrspace.o  DISK_0       kernel.o      mipssim.o   scheduler.o     sysdep.o
+alarm.o      disk.o       libtest.o     [0m[01;32mnachos[0m      stats.o         thread.o
+bitmap.o     exception.o  machine.o     network.o   switch.o        timer.o
+console.o    filehdr.o    main.o        openfile.o  synchconsole.o  translate.o
+debug.o      filesys.o    Makefile      pbitmap.o   synchdisk.o
+directory.o  interrupt.o  Makefile.dep  post.o      synch.o
+]0;nthu-os@nthuos-VirtualBox: ~/Desktop/NachOS-4.0_MP1/code/build.linux[01;32mnthu-os@nthuos-VirtualBox[00m:[01;34m~/Desktop/NachOS-4.0_MP1/code/build.linux[00m$ .[Kcd ../test
+]0;nthu-os@nthuos-VirtualBox: ~/Desktop/NachOS-4.0_MP1/code/test[01;32mnthu-os@nthuos-VirtualBox[00m:[01;34m~/Desktop/NachOS-4.0_MP1/code/test[00m$ ls
+a                     [0m[01;32mconsoleIO_test2.coff[0m  halt          script
+add                   consoleIO_test2.o     halt.c        segments.c
+add.c                 DISK_0                [01;32mhalt.coff[0m     shell.c
+[01;32madd.coff[0m              fileIO_test1          halt.o        sort
+add.o                 fileIO_test1.c        hw2           sort.c
+consoleIO_test1       [01;32mfileIO_test1.coff[0m     hw2.c         start.o
+consoleIO_test1.c     fileIO_test1.o        [01;32mhw2.coff[0m      start.S
+[01;32mconsoleIO_test1.coff[0m  fileIO_test2          hw2.o         typescript
+consoleIO_test1.o     fileIO_test2.c        Makefile
+consoleIO_test2       [01;32mfileIO_test2.coff[0m     Makefile.dep
+consoleIO_test2.c     fileIO_test2.o        matmult.c
+]0;nthu-os@nthuos-VirtualBox: ~/Desktop/NachOS-4.0_MP1/code/test[01;32mnthu-os@nthuos-VirtualBox[00m:[01;34m~/Desktop/NachOS-4.0_MP1/code/test[00m$ make clean
+rm -f -f *.o *.ii
+rm -f -f *.coff
+]0;nthu-os@nthuos-VirtualBox: ~/Desktop/NachOS-4.0_MP1/code/test[01;32mnthu-os@nthuos-VirtualBox[00m:[01;34m~/Desktop/NachOS-4.0_MP1/code/test[00m$ mk[Kake
+../../usr/local/nachos/bin/decstation-ultrix-gcc -G 0 -c -I../userprog -I../lib -B/usr/bin/local/nachos/lib/gcc-lib/decstation-ultrix/2.95.2/ -B/usr/bin/local/nachos/decstation-ultrix/bin/ -c add.c
+decstation-ultrix-gcc: file path prefix `/usr/bin/local/nachos/decstation-ultrix/bin/' never used
+../../usr/local/nachos/bin/decstation-ultrix-gcc -G 0 -c -I../userprog -I../lib -B/usr/bin/local/nachos/lib/gcc-lib/decstation-ultrix/2.95.2/ -B/usr/bin/local/nachos/decstation-ultrix/bin/ -mips2 -c start.S
+decstation-ultrix-gcc: file path prefix `/usr/bin/local/nachos/decstation-ultrix/bin/' never used
+../../usr/local/nachos/bin/decstation-ultrix-ld -T script -N start.o add.o -o add.coff
+../../coff2noff/coff2noff.x86Linux add.coff add
+numsections 3 
+Loading 3 sections:
+	".text", filepos 0xd0, mempos 0x0, size 0x180
+	".data", filepos 0x250, mempos 0x180, size 0x0
+	".bss", filepos 0x0, mempos 0x180, size 0x0
+../../usr/local/nachos/bin/decstation-ultrix-gcc -G 0 -c -I../userprog -I../lib -B/usr/bin/local/nachos/lib/gcc-lib/decstation-ultrix/2.95.2/ -B/usr/bin/local/nachos/decstation-ultrix/bin/ -c halt.c
+decstation-ultrix-gcc: file path prefix `/usr/bin/local/nachos/decstation-ultrix/bin/' never used
+../../usr/local/nachos/bin/decstation-ultrix-ld -T script -N start.o halt.o -o halt.coff
+../../coff2noff/coff2noff.x86Linux halt.coff halt
+numsections 3 
+Loading 3 sections:
+	".text", filepos 0xd0, mempos 0x0, size 0x170
+	".data", filepos 0x240, mempos 0x170, size 0x0
+	".bss", filepos 0x0, mempos 0x170, size 0x0
+../../usr/local/nachos/bin/decstation-ultrix-gcc -G 0 -c -I../userprog -I../lib -B/usr/bin/local/nachos/lib/gcc-lib/decstation-ultrix/2.95.2/ -B/usr/bin/local/nachos/decstation-ultrix/bin/ -c consoleIO_test1.c
+decstation-ultrix-gcc: file path prefix `/usr/bin/local/nachos/decstation-ultrix/bin/' never used
+../../usr/local/nachos/bin/decstation-ultrix-ld -T script -N start.o consoleIO_test1.o -o consoleIO_test1.coff
+../../coff2noff/coff2noff.x86Linux consoleIO_test1.coff consoleIO_test1
+numsections 3 
+Loading 3 sections:
+	".text", filepos 0xd0, mempos 0x0, size 0x1b0
+	".data", filepos 0x280, mempos 0x1b0, size 0x0
+	".bss", filepos 0x0, mempos 0x1b0, size 0x0
+../../usr/local/nachos/bin/decstation-ultrix-gcc -G 0 -c -I../userprog -I../lib -B/usr/bin/local/nachos/lib/gcc-lib/decstation-ultrix/2.95.2/ -B/usr/bin/local/nachos/decstation-ultrix/bin/ -c consoleIO_test2.c
+decstation-ultrix-gcc: file path prefix `/usr/bin/local/nachos/decstation-ultrix/bin/' never used
+../../usr/local/nachos/bin/decstation-ultrix-ld -T script -N start.o consoleIO_test2.o -o consoleIO_test2.coff
+../../coff2noff/coff2noff.x86Linux consoleIO_test2.coff consoleIO_test2
+numsections 3 
+Loading 3 sections:
+	".text", filepos 0xd0, mempos 0x0, size 0x1b0
+	".data", filepos 0x280, mempos 0x1b0, size 0x0
+	".bss", filepos 0x0, mempos 0x1b0, size 0x0
+../../usr/local/nachos/bin/decstation-ultrix-gcc -G 0 -c -I../userprog -I../lib -B/usr/bin/local/nachos/lib/gcc-lib/decstation-ultrix/2.95.2/ -B/usr/bin/local/nachos/decstation-ultrix/bin/ -c fileIO_test1.c
+decstation-ultrix-gcc: file path prefix `/usr/bin/local/nachos/decstation-ultrix/bin/' never used
+../../usr/local/nachos/bin/decstation-ultrix-ld -T script -N start.o fileIO_test1.o -o fileIO_test1.coff
+../../coff2noff/coff2noff.x86Linux fileIO_test1.coff fileIO_test1
+numsections 4 
+Loading 4 sections:
+	".text", filepos 0xf0, mempos 0x0, size 0x300
+	".rdata", filepos 0x3f0, mempos 0x300, size 0x90
+	".data", filepos 0x480, mempos 0x390, size 0x0
+	".bss", filepos 0x0, mempos 0x390, size 0x0
+../../usr/local/nachos/bin/decstation-ultrix-gcc -G 0 -c -I../userprog -I../lib -B/usr/bin/local/nachos/lib/gcc-lib/decstation-ultrix/2.95.2/ -B/usr/bin/local/nachos/decstation-ultrix/bin/ -c fileIO_test2.c
+decstation-ultrix-gcc: file path prefix `/usr/bin/local/nachos/decstation-ultrix/bin/' never used
+../../usr/local/nachos/bin/decstation-ultrix-ld -T script -N start.o fileIO_test2.o -o fileIO_test2.coff
+../../coff2noff/coff2noff.x86Linux fileIO_test2.coff fileIO_test2
+numsections 4 
+Loading 4 sections:
+	".text", filepos 0xf0, mempos 0x0, size 0x310
+	".rdata", filepos 0x400, mempos 0x310, size 0xa0
+	".data", filepos 0x4a0, mempos 0x3b0, size 0x0
+	".bss", filepos 0x0, mempos 0x3b0, size 0x0
+../../usr/local/nachos/bin/decstation-ultrix-gcc -G 0 -c -I../userprog -I../lib -B/usr/bin/local/nachos/lib/gcc-lib/decstation-ultrix/2.95.2/ -B/usr/bin/local/nachos/decstation-ultrix/bin/ -c hw2.c
+decstation-ultrix-gcc: file path prefix `/usr/bin/local/nachos/decstation-ultrix/bin/' never used
+../../usr/local/nachos/bin/decstation-ultrix-ld -T script -N start.o hw2.o -o hw2.coff
+../../coff2noff/coff2noff.x86Linux hw2.coff hw2
+numsections 4 
+Loading 4 sections:
+	".text", filepos 0xf0, mempos 0x0, size 0x190
+	".rdata", filepos 0x280, mempos 0x190, size 0x10
+	".data", filepos 0x290, mempos 0x1a0, size 0x0
+	".bss", filepos 0x0, mempos 0x1a0, size 0x0
+]0;nthu-os@nthuos-VirtualBox: ~/Desktop/NachOS-4.0_MP1/code/test[01;32mnthu-os@nthuos-VirtualBox[00m:[01;34m~/Desktop/NachOS-4.0_MP1/code/test[00m$ ./[K[Kmake cleanls[Kcd ../testls[Kcd../test[5Pmake cleanls[Kcd ../build.linux/ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cscriptrm typescript ls[K../build.linux/nachhos -d u -e hw2
+hw2
+Received Exception 1 type: 8
+
+Program Write is called
+
+Pointer Value: 0x9511660
+number of bytes: 12
+Received Exception 1 type: 0
+
+Shutdown, initiated by user program.
+
+Machine halting!
+
+This is halt
+Ticks: total 61, idle 0, system 40, user 21
+Disk I/O: reads 0, writes 0
+Console I/O: reads 0, writes 0
+Paging: faults 0
+Network I/O: packets received 0, sent 0
+]0;nthu-os@nthuos-VirtualBox: ~/Desktop/NachOS-4.0_MP1/code/test[01;32mnthu-os@nthuos-VirtualBox[00m:[01;34m~/Desktop/NachOS-4.0_MP1/code/test[00m$ exit
+
+Script done on 廿十七年九月卅日 (週六) 十七時57分三秒
